@@ -20,9 +20,9 @@ $(document).ready(function () {
         greenCrystal = Math.floor(Math.random() * 11) + 1;
         redCrystal = Math.floor(Math.random() * 11) + 1;
         yellowCrystal = Math.floor(Math.random() * 11) + 1;
-       
+
     }
-  
+
 
     // Game logic
     function startGame() {
@@ -37,26 +37,26 @@ $(document).ready(function () {
         $("#yellow").attr("data-crystalvalue", yellowCrystal);
         $("#win-score").text(winCount);
         $("#lose-score").text(loseCount);
-      
+
         console.log(blueCrystal, greenCrystal, redCrystal, yellowCrystal);
     }
-   
+
     // Set Win-Lose function
     function win() {
         winCount++;
         $("#win-score").text(winCount);
-       
+
     }
 
     function lose() {
         loseCount++;
         $("#lose-score").text(loseCount);
     }
-    
-startGame();
+
+    startGame();
 
     // Add the onclick event for crystal 
-    $(".crystal-images").on("click", function() {
+    $(".crystal-images").on("click", function () {
         if (yourScore >= targetScore) {
             return;
         }
@@ -68,9 +68,12 @@ startGame();
 
         if (yourScore === targetScore) {
             win();
-        }else if(yourScore > targetScore) {
+        } else if (yourScore > targetScore) {
             lose();
         }
+    });
 
+    $(".btn").on("click", function () {
+        startGame();
     });
 });
