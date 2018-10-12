@@ -6,10 +6,10 @@ $(document).ready(function () {
     var winCount = 0;
     var loseCount = 0;
     var targetScore = 0;
-    var blueCrystal;
-    var greenCrystal;
-    var redCrystal;
-    var yellowCrystal;
+    var blueCrystal = [];
+    var greenCrystal= [];
+    var redCrystal = [];
+    var yellowCrystal =[];
 
     function randomNumber() {
         // The random number shown at the start of the game between 19 - 120.
@@ -36,30 +36,36 @@ $(document).ready(function () {
         $("#yellow").attr("data-crystalvalue", yellowCrystal);
         $("#win-score").text(winCount);
         $("#lose-score").text(loseCount);
-
+    
         console.log(blueCrystal, greenCrystal, redCrystal, yellowCrystal);
     }
 
     // Set Win-Lose function
     function win() {
+        // $(".crystal-images").attr("src", "assets/images/treasurechest.jpg");
         winCount++;
         $("#win-score").text(winCount);
+        alert("You WIN, Click reset button to play again!")    
     }
 
     function lose() {
+        // $(".crystal-images").attr("src", "assets/images/emptytreasure.jpg");
         loseCount++;
-        $("#lose-score").text(loseCount);
+        $("#lose-score").text(loseCount);  
+        alert("You LOSE! Click reset to try again!")
     }
-
     startGame();
 
         // Hover crystals 
+
         $(".crystal-images").hover(function() {
             $(this).css({opacity: 0.5});
         },
         function (){
             $(this).css({opacity: 1})
         });
+    
+     
 
     // Add the onclick function for crystal, adding value to crystal-images
     $(".crystal-images").on("click", function () {
@@ -79,7 +85,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".btn").on("click", function () {
-        startGame();
+    $(".btn").on("click", function () {   
+        startGame();    
     });
 });
