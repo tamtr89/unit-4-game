@@ -20,7 +20,6 @@ $(document).ready(function () {
         greenCrystal = Math.floor(Math.random() * 11) + 1;
         redCrystal = Math.floor(Math.random() * 11) + 1;
         yellowCrystal = Math.floor(Math.random() * 11) + 1;
-
     }
 
 
@@ -45,7 +44,6 @@ $(document).ready(function () {
     function win() {
         winCount++;
         $("#win-score").text(winCount);
-
     }
 
     function lose() {
@@ -55,7 +53,15 @@ $(document).ready(function () {
 
     startGame();
 
-    // Add the onclick event for crystal 
+        // Hover crystals 
+        $(".crystal-images").hover(function() {
+            $(this).css({opacity: 0.5});
+        },
+        function (){
+            $(this).css({opacity: 1})
+        });
+
+    // Add the onclick function for crystal, adding value to crystal-images
     $(".crystal-images").on("click", function () {
         if (yourScore >= targetScore) {
             return;
