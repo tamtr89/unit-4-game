@@ -1,10 +1,19 @@
+
 .display-4 {
-    font-family: 'Cabin Sketch', cursive;
-    
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;   
+    color: #32f3a9;
+    background-color: #2d2d2d60;
+    letter-spacing: .1em;
+    text-shadow: 
+          -1px -1px 1px #111, 
+          2px 2px 1px #363636;
+    margin-bottom: 30px;
 }
 
 h3, h5 {
-    font-family: 'Kosugi Maru', sans-serif;
+    font-family: 'Hi Melody', cursive;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
 }
@@ -15,32 +24,35 @@ h3, h5 {
 /* Crystal Image */
 .crystal-images {
     width: 170px;
- 
+}
+#crystal {
+    margin: auto;
 }
 
+/* JUMBOTRON */
 .jumbotron-fluid,
 #second-row {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .jumbotron-fluid {
-    text-align: center;
-    color: antiquewhite;
     background-color: rgb(0, 56, 82);  
-
 }
-
-#crystal {
-    margin: auto;
+.jumbotron {
+    background-image: url("../images/jum.gif");
+    background-size: 50%;
+    border-radius: 5px;
 }
+/* END JUMBOTRON */
+
+
 /* footer */
 .text-muted {
     text-align: center;
 }
 
 /* Animation adding */
-@keyframes stretch{
+/* @keyframes stretch{
     0% {
         transform: scale(.3);
         background-color: rgb(85, 12, 30);
@@ -60,9 +72,9 @@ h3, h5 {
     animation-name: stretch;
     animation-duration: 2s; 
     animation-timing-function: ease-out; 
-    animation-delay: 3s;
+    animation-delay: 2s;
     animation-direction: alternate;
     animation-iteration-count: none;
     animation-fill-mode: both;
     animation-play-state: running; 
-}
+} */

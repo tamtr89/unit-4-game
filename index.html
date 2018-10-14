@@ -11,13 +11,13 @@
         crossorigin="anonymous">
     <!-- CSS Style link -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Kosugi+Maru" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Hi+Melody" rel="stylesheet">
 
 </head>
 
 <!-- Body Starts here -->
 
-<body>
+<body background="assets/images/background.jpg">
     <!-- Jumbotron header -->
     <div class="container">
         <div class="jumbotron jumbotron-fluid">
@@ -32,24 +32,36 @@
                 <div class="card">
 
                     <div class="card-header">
-                        <h3>Instruction</h3>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Click to see Instruction
+                        </button>
                     </div>
                     <div class="card-body">
-                        <p>You will be given a random number to start of the game. There are four crystal displayed as
-                            button
-                            on the page.
-                            By clicking on a crystal you will add a specific amount of points to your total score.
-                            <p>
-                                You win the game by matching your total score to random number, you lose the game if
-                                your
-                                total
-                                score goes above the random number.
-                                The value of each crystal is hidden from you until you click on it. Each time when the
-                                game
-                                starts,
-                                the game will change the values of each crystal.
-                            </p>
-                        </p>
+                        <div class="collapse" id="collapseExample">
+                            <div class="card card-body">
+                                <p>You will be given a random number to start of the game. There are four crystal
+                                    displayed as
+                                    button
+                                    on the page.
+                                    By clicking on a crystal you will add a specific amount of points to your total
+                                    score.
+                                    <p>
+                                        You win the game by matching your total score to random number, you lose the
+                                        game if
+                                        your
+                                        total
+                                        score goes above the random number.
+                                        The value of each crystal is hidden from you until you click on it. Each time
+                                        when the
+                                        game
+                                        starts,
+                                        the game will change the values of each crystal.
+                                    </p>
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -112,10 +124,10 @@
                         <h5>Crystal Selection</h5>
                     </div>
                     <div class="card-body" id="crystal">
-                        <img class="crystal-images" id="blue" src="assets/images/bluecrystal.png" alt="Blue Crystal">
-                        <img class="crystal-images" id="green" src="assets/images/greencrystal.png" alt="Green Crystal">
-                        <img class="crystal-images" id="red" src="assets/images/redcrystal.png" alt="Red Crystal">
-                        <img class="crystal-images" id="yellow" src="assets/images/yellowcrystal.png" alt="Yellow Crystal">
+                        <img class="crystal-images" id="blue">
+                        <img class="crystal-images" id="green">
+                        <img class="crystal-images" id="red">
+                        <img class="crystal-images" id="yellow">
                     </div>
                 </div>
             </div>

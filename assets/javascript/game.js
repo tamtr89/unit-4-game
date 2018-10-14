@@ -36,20 +36,25 @@ $(document).ready(function () {
         $("#yellow").attr("data-crystalvalue", yellowCrystal);
         $("#win-score").text(winCount);
         $("#lose-score").text(loseCount);
-    
+        // Crystal Images
+        $("#blue").attr("src", "assets/images/bluecrystal.png");
+        $("#green").attr("src","assets/images/greencrystal.png");
+        $("#red").attr("src", "assets/images/redcrystal.png");
+        $("#yellow").attr("src", "assets/images/yellowcrystal.png");
+
         console.log(blueCrystal, greenCrystal, redCrystal, yellowCrystal);
     }
 
     // Set Win-Lose function
     function win() {
-        // $(".crystal-images").attr("src", "assets/images/treasurechest.jpg");
+        $(".crystal-images").attr("src", "assets/images/win.png");
         winCount++;
         $("#win-score").text(winCount);
         alert("You WIN, Click reset button to play again!")    
     }
 
     function lose() {
-        // $(".crystal-images").attr("src", "assets/images/emptytreasure.jpg");
+        $(".crystal-images").attr("src", "assets/images/lose.png");
         loseCount++;
         $("#lose-score").text(loseCount);  
         alert("You LOSE! Click reset to try again!")
