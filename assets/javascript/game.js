@@ -7,9 +7,14 @@ $(document).ready(function () {
     var loseCount = 0;
     var targetScore = 0;
     var blueCrystal = [];
-    var greenCrystal= [];
+    var greenCrystal = [];
     var redCrystal = [];
-    var yellowCrystal =[];
+    var yellowCrystal = [];
+
+    // Background Audio
+    var soundElement = document.createElement("audio");
+    soundElement.setAttribute("src", "assets/candy_crush_sound3.mp3")
+
 
     function randomNumber() {
         // The random number shown at the start of the game between 19 - 120.
@@ -38,7 +43,7 @@ $(document).ready(function () {
         $("#lose-score").text(loseCount);
         // Crystal Images
         $("#blue").attr("src", "assets/images/bluecrystal.png");
-        $("#green").attr("src","assets/images/greencrystal.png");
+        $("#green").attr("src", "assets/images/greencrystal.png");
         $("#red").attr("src", "assets/images/redcrystal.png");
         $("#yellow").attr("src", "assets/images/yellowcrystal.png");
 
@@ -50,30 +55,46 @@ $(document).ready(function () {
         $(".crystal-images").attr("src", "assets/images/win.png");
         winCount++;
         $("#win-score").text(winCount);
-        alert("You WIN, Click reset button to play again!")    
+        alert("You WIN, Click reset button to play again!")
     }
 
     function lose() {
         $(".crystal-images").attr("src", "assets/images/lose.png");
         loseCount++;
-        $("#lose-score").text(loseCount);  
+        $("#lose-score").text(loseCount);
         alert("You LOSE! Click reset to try again!")
     }
     startGame();
 
-        // Hover crystals 
 
-        $(".crystal-images").hover(function() {
-            $(this).css({opacity: 0.5});
-        },
-        function (){
-            $(this).css({opacity: 1})
+    // Hover crystals 
+
+    $(".crystal-images").hover(function () {
+        $(this).css({ opacity: 0.5 });
+    },
+        function () {
+            $(this).css({ opacity: 1 })
         });
-    
-     
+
+
+
+
+    //move this into its own click function. 
+    console.log("SOUNDS: ", soundElement);
+    soundElement.play();
+
+    // Theme Button
+    $(".theme-button").on("click", function () {
+        soundElement.play();
+    });
+    $(".pause-button").on("click", function () {
+        soundElement.pause();
+    });
+
 
     // Add the onclick function for crystal, adding value to crystal-images
     $(".crystal-images").on("click", function () {
+
         if (yourScore >= targetScore) {
             return;
         }
@@ -90,7 +111,7 @@ $(document).ready(function () {
         }
     });
 
-    $(".btn").on("click", function () {   
-        startGame();    
+    $(".btn").on("click", function () {
+        startGame();
     });
 });
