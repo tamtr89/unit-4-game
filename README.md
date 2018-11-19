@@ -23,5 +23,10 @@ When they do click one, update the player's score counter.
  <li>The random number shown at the start of the game should be between 19 - 120.
 <li>Each crystal should have a random hidden value between 1 - 12.
 
+<h3>Technology used:</h3>
+<li>HTML5
+ <li>Bootstrap
+  <li>CSS
+   <li>jQuery
 <h4>Demo:</h4>
 https://tamtr89.github.io/unit-4-game/
