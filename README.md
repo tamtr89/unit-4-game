@@ -1,4 +1,7 @@
 <h1>jQuery Assignment: Crystal Collector</h1>
+<h4>Demo:</h4>
+https://tamtr89.github.io/unit-4-game/
+
 
 <h4>In this assignment, you'll create another fun and interactive game for web browsers. This time, your app must dynamically update your HTML pages with the jQuery library.</h4>
 
@@ -28,5 +31,3 @@ When they do click one, update the player's score counter.
  <li>Bootstrap
   <li>CSS
    <li>jQuery
-<h4>Demo:</h4>
-https://tamtr89.github.io/unit-4-game/
